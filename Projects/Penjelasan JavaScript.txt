@@ -1,0 +1,11 @@
+Penjelasan JavaScript:
+Menu Responsif:
+Menambahkan tombol toggle untuk menu navigasi. Ketika tombol ini diklik, kelas open ditambahkan atau dihapus dari elemen nav, yang dapat Anda gunakan 
+untuk mengubah gaya menu.
+
+Efek Scroll Halus:
+Menambahkan efek scroll halus saat tautan navigasi diklik. Ketika tautan diklik, halaman akan bergulir ke bagian yang dituju dengan efek halus.
+
+Galeri Gambar:
+Menambahkan fungsi galeri sederhana yang memperbesar gambar saat diklik. Ketika gambar diklik, modal dengan gambar yang lebih besar akan muncul. Modal dapat ditutup dengan mengkliknya.
+Langkah Selanjutnya:

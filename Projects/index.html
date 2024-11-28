@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>
+        <title>Halaman Profil Banten</title>
+        <link rel="stylesheet" href="assets/styles/style.css" />
+        <link rel="preconnect" href="https:fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const nav = document.querySelector('nav');
+                const toggleButton = document.createElement('button');
+                toggleButton.textContent = '☰';
+                toggleButton.style.fontSize = '1.5em';
+                toggleButton.style.background = 'none';
+                toggleButton.style.border = 'none';
+                toggleButton.style.color = '#fff';
+                toggleButton.style.cursor = 'pointer';
+                
+                nav.prepend(toggleButton);
+                toggleButton.addEventListener('click', function() {
+                    nav.classList.toggle('open');
+                });
+            });
+            const smoothScroll = (target) => {
+                const element = document.querySelector(target);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            };
+            
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    smoothScroll(this.getAttribute('href'));
+                });
+            });
+            
+            
+            document.querySelectorAll('.featured-image').forEach(image => {
+                image.addEventListener('click', function() {
+                    const modal = document.createElement('div');
+                    modal.style.position = 'fixed';
+                    modal.style.top = '0';
+                    modal.style.left = '0';
+                    modal.style.width = '100%';
+                    modal.style.height = '100%';
+                    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                    modal.style.display = 'flex';
+                    modal.style.alignItems = 'center';
+                    modal.style.justifyContent = 'center';
+                    modal.style.zIndex = '1000';
+            
+                    const img = document.createElement('img');
+                    img.src = this.src;
+                    img.style.maxWidth = '90%';
+                    img.style.maxHeight = '90%';
+                    modal.appendChild(img);
+            
+                    modal.addEventListener('click', function() {
+                        modal.remove();
+                    });
+            
+                    document.body.appendChild(modal);
+                });
+            });
+            </script>
+        <header>
+            <div class="bar">
+                <h1>Banten</h1>
+                <p>
+                    Provinsi dengan beribu wisata menarik di pulau jawa
+                </p>
+            </div>
+            <nav>
+    <ul>
+        <li>
+            <a href="#sejarah">Sejarah</a>
+        </li>
+        <li>
+            <a href="#geografis">Geografis</a>
+        </li>
+        <li>
+            <a href="#wisata">wisata</a>
+        </li>
+    </ul>
+</nav>
+        </header>
+
+        <main>
+            <div id="content">
+                <article id="sejarah" class="card">
+                    <h2>Sejarah</h2>
+                    <img src="assets/image/sejarah banten.jpg" alt="sejarah" class="featured-image"/>
+                    <p>
+                        Banten memiliki sejarah panjang yang dimulai sejak masa kerajaan Hindu-Buddha. Pada masa itu, 
+                        wilayah Banten merupakan bagian dari Kerajaan Tarumanegara yang berkuasa pada abad ke-5 hingga abad ke-7.
+                        Pengaruh Hindu-Buddha terlihat dari prasasti-prasasti yang ditemukan di wilayah ini, menunjukkan bahwa Banten merupakan
+                        pusat peradaban penting pada masa tersebut. Setelah runtuhnya Tarumanegara, Banten menjadi bagian dari Kerajaan Sunda, 
+                        yang juga bercorak Hindu-Buddha. Wilayah ini kemudian berkembang menjadi salah satu pusat perdagangan yang strategis, 
+                        berkat posisinya di jalur perdagangan internasional yang menghubungkan India, Tiongkok, dan wilayah Asia Tenggara lainnya. 
+                    </p>
+                    <p>
+                        Banten memiliki sejarah yang kaya, dimulai dari masa kerajaan Hindu-Buddha hingga era Islam dan kolonialisme.
+                        Pada masa Hindu-Buddha, wilayah Banten berada di bawah kekuasaan Kerajaan Tarumanegara, yang meninggalkan bukti berupa prasasti-prasasti kuno.
+                        Setelah runtuhnya Tarumanegara, wilayah ini menjadi bagian dari Kerajaan Sunda dan dikenal sebagai salah satu pusat perdagangan penting. 
+                        Letaknya yang strategis di jalur pelayaran internasional menjadikan Banten tempat persinggahan kapal-kapal dagang dari berbagai negara seperti India, 
+                        Tiongkok, dan Arab. Keberadaan Banten sebagai pusat perdagangan terus berkembang, bahkan hingga masa transisi menuju era Islam.
+                    </p>
+                </article>
+                <article id="geografis" class="card">
+                    <h2>Geografis</h2>
+                    <img src="assets/image/geografis banten.jpg" alt="geografis" class="featured-image"/>
+                    <p>
+                        Provinsi Banten terletak di ujung barat Pulau Jawa dan memiliki letak geografis yang sangat strategis. 
+                        Di sebelah utara, Banten berbatasan dengan Laut Jawa, sementara di sebelah timur berbatasan dengan Provinsi DKI Jakarta dan Jawa Barat. 
+                        Di sebelah selatan, wilayah Banten berbatasan dengan Samudra Hindia, sedangkan di sebelah barat berbatasan langsung dengan Selat Sunda yang memisahkan Pulau Jawa dan Pulau Sumatra. 
+                        Lokasi strategis ini menjadikan Banten sebagai gerbang utama antara Pulau Jawa dan Sumatra melalui Pelabuhan Merak. 
+                        Selain itu, wilayah geografis Banten meliputi dataran rendah di bagian utara yang cocok untuk kegiatan ekonomi dan perkotaan, 
+                        serta pegunungan di bagian selatan seperti Pegunungan Halimun dan kawasan Ujung Kulon yang menjadi area konservasi dan pariwisata.
+                    </p>                               
+                </article>
+                <article id="wisata" class="card">
+                    <h2>Wisata</h2>
+                    <p>
+                        Banten memiliki sejumlah destinasi wisata alam yang memukau,
+                        salah satunya adalah Pantai Sawarna dan Negeri di Atas Awan Citorek
+                    </p>
+                    <section>
+                        <h3>Pantai Sawarna</h3>
+                        <img src="assets/image/sawrana.jpg" alt="pantai sawarna" class="featured-image"/>
+                        <p>
+                            Pantai Sawarna terletak di Kecamatan Bayah, Kabupaten Lebak, dan terkenal dengan keindahan pasir putihnya yang membentang 
+                            sepanjang pantai. Ombaknya yang besar juga menjadi daya tarik bagi para peselancar, baik dari dalam maupun luar negeri. 
+                            Selain itu, pantai ini dikelilingi oleh tebing-tebing karang yang menjadikannya semakin eksotis, serta berbagai spot menarik 
+                            seperti Goa Langir dan Tanjung Layar. Pantai Sawarna menawarkan suasana alami yang masih asri, cocok bagi pengunjung yang ingin 
+                            menikmati keindahan alam sambil menjauh dari keramaian.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Negeri di atas Awan</h3>
+                        <img src="assets/image/citorek.jpg" alt="citorek" class="featured-image"/>
+                        <p>
+                            Negeri di Atas Awan Citorek, yang terletak di Kecamatan Cibeber, Kabupaten Lebak, 
+                            adalah destinasi wisata pegunungan dengan pemandangan memukau. Tempat ini berada di ketinggian sekitar 
+                            1.050 meter di atas permukaan laut, sehingga menawarkan panorama hamparan awan yang seolah menyelimuti 
+                            perbukitan. Wisatawan biasanya datang pagi-pagi buta untuk menyaksikan matahari terbit yang mempesona 
+                            dari puncak Citorek. Selain itu, udaranya yang sejuk dan lingkungan yang masih sangat alami membuat tempat 
+                            ini ideal untuk relaksasi dan menikmati keindahan alam Banten. Kedua destinasi ini mencerminkan kekayaan alam 
+                            Banten yang memadukan pesona pantai dan pegunungan, memberikan pengalaman wisata yang beragam dan tak terlupakan.               
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <aside>
+                <article class="profile card">
+                    <header>
+                        <h2>Provinsi Banten</h2>
+                        <p>Provinsi asri</p>
+                        <figure>
+                            <img src="assets/image/logo banten.png"/>
+                            <figcaption>Lambang</figcaption>
+                        </figure>
+                    </header>
+                    <section>
+                        <h3>Informasi Lainnya</h3>
+
+                        <table>
+                            <tr>
+                                <th>Negara</th>
+                                <td>Indonesia</td>
+                            </tr>
+                            <tr>
+                                <th>Hari jadi</th>
+                                <td>04 Oktober 2004</td>
+                            </tr>
+                            <tr>
+                                <th>Luas Total</th>
+                                <td>966,662 km<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <th>bahasa daerah</th>
+                                <td>Jawa, Sunda, jaseng</td>
+                            </tr>
+                            <tr>
+                                <th>Kode Telepon</th>
+                                <td>+62</td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+            </aside>
+        </main>
+        <footer>
+            <p>Belajar Dasar Pemrograman Web IDCAMP 2024</p>
+          </footer>
+    </body>
+</html>
